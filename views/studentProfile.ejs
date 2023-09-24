@@ -1,0 +1,58 @@
+<div class="studentProfilePage">
+  <div class="studentProfileContainer">
+    <!-- <%= student.name %> -->
+    <form action="/updateStudent" method="post">
+      <input type="text" name="id" value="<%= student.id %>" hidden />
+      <div class="keyValueContainer">
+        <div class="key">Name :</div>
+        <div class="value"><%= student.name %></div>
+      </div>
+      <div class="keyValueContainer">
+        <div class="key">Email :</div>
+        <div class="value"><%= student.email %></div>
+      </div>
+      <div class="keyValueContainer">
+        <div class="key">College :</div>
+        <div class="value"><div><%= student.college %></div></div>
+      </div>
+      <div class="keyValueContainer">
+        <div class="key">Status :</div>
+        <div id="currentDisplay" class="value"><%= student.status %></div>
+        <select
+          id="changeStatusOfStudent"
+          class="addValue"
+          name="status"
+          id="status"
+          hidden
+        >
+          <option value="Placed">Placed</option>
+          <option value="not Placed">Not Placed</option>
+        </select>
+      </div>
+      <div class="keyValueContainer">
+        <div class="key">DSA Final Score :</div>
+        <div class="value"><%= student.DSA_final_score %></div>
+      </div>
+      <div class="keyValueContainer">
+        <div class="key">WEB Final Score :</div>
+        <div class="value"><%= student.Web_final_score %></div>
+      </div>
+      <div class="keyValueContainer">
+        <div class="key">React Final Score :</div>
+        <div class="value"><%= student.React_final_score %></div>
+      </div>
+      <div class="keyValueContainer">
+        <div class="key">Interviews :</div>
+        <div class="value">
+          <ol>
+            <% interviews.forEach((company)=>{ %>
+            <li><%= company.companyName %></li>
+            <% }) %>
+          </ol>
+        </div>
+      </div>
+      <button id="saveStudentStatus" style="display: none">Save</button>
+    </form>
+    <button id="editStudentStatus">Edit</button>
+  </div>
+</div>

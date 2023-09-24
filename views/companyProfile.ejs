@@ -1,0 +1,94 @@
+<div class="studentProfilePage">
+  <div class="studentProfileContainer">
+    <!-- <form action="#" method="post"> -->
+    <div class="keyValueContainer">
+      <div class="key">Name :</div>
+      <div class="value"><%= company.name %></div>
+    </div>
+    <div class="keyValueContainer">
+      <div class="key">Date Of Interview :</div>
+      <div class="value"><%= company.DateOfInterview %></div>
+    </div>
+    <div class="keyValueContainer">
+      <div class="key">Student Participated :</div>
+      <div class="value">
+        <form
+          class="formDisplay"
+          action="/appNewStudentInParticipationList"
+          method="post"
+        >
+          <input name="id" value="<%= company.id %>" hidden />
+          <select name="newStuToAdd">
+            <% participatedStudent.forEach((stuPen)=>{ %>
+            <option value="<%= stuPen.id %>"><%= stuPen.name %></option>
+
+            <% }) %>
+          </select>
+          <button type="submit">Add Student</button>
+        </form>
+        <ol>
+          <% company.studentParticipatedList.forEach((studentId)=>{ %> <%
+          studentList.forEach((student)=>{ %> <% if(studentId == student.id){ %>
+          <li><%= student.name %></li>
+
+          <% } }) })%>
+        </ol>
+      </div>
+    </div>
+    <div class="keyValueContainer">
+      <div class="key">student selected :</div>
+      <div class="value">
+        <form
+          class="formDisplay"
+          action="/appNewStudentInSelectedList"
+          method="post"
+        >
+          <input name="id" value="<%= company.id %>" hidden />
+          <select name="newStuToAdd">
+            <% selectStudentList.forEach((stuPen)=>{ %>
+            <option value="<%= stuPen.id %>"><%= stuPen.name %></option>
+
+            <% }) %>
+          </select>
+          <button type="submit">Add Student</button>
+        </form>
+        <ol>
+          <% company.studentSelected.forEach((studentId)=>{ %> <%
+          studentList.forEach((student)=>{ %> <% if(studentId == student.id){ %>
+          <li><%= student.name %></li>
+
+          <% } %> <% }) %> <% })%>
+        </ol>
+      </div>
+    </div>
+    <div class="keyValueContainer">
+      <div class="key">student On Hole :</div>
+      <div class="value">
+        <form
+          class="formDisplay"
+          action="/appNewStudentInOnHoldList"
+          method="post"
+        >
+          <input name="id" value="<%= company.id %>" hidden />
+          <select name="newStuToAdd">
+            <% selectOnHoldFromParticipent.forEach((stuPen)=>{ %>
+            <option value="<%= stuPen.id %>"><%= stuPen.name %></option>
+
+            <% }) %>
+          </select>
+          <button type="submit">Add Student</button>
+        </form>
+        <ol>
+          <% company.studentOnHold.forEach((studentId)=>{ %> <%
+          studentList.forEach((student)=>{ %> <% if(studentId == student.id){ %>
+          <li><%= student.name %></li>
+
+          <% } %> <% }) %> <% })%>
+        </ol>
+      </div>
+    </div>
+    <!-- </form> -->
+    <button id="cancelCompanyProfile" style="display: none">Cancel</button>
+    <button id="editCompanyProfile">Edit</button>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/signIn.css" type="text/css" />
+  </head>
+  <body>
+    <div class="homeTopDiv">
+      <h1>Welcome to Placement Cell</h1>
+    </div>
+    <div class="homeRemainingDiv">
+      <div class="signInContainer">
+        <div class="signInHeading">Sign Un</div>
+        <!-- <form action="" method="post"></form> -->
+        <form
+          action="/createNewAdmin"
+          method="POST"
+          class="signinInputContainer"
+        >
+          <label for="userName">User Name</label>
+          <input
+            type="text"
+            id="userName"
+            name="name"
+            placeholder="Enter User User Name"
+            autocomplete
+            required
+          />
+          <label for="email">email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter User email id"
+            autocomplete
+            required
+          />
+          <label for="password"> Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your Password"
+            autocomplete
+            required
+          />
+          <label for="confirm_password">Confirm Password</label>
+          <input
+            type="password"
+            id="confirm_password"
+            name="confirm_password"
+            placeholder=" re-enter your Password"
+            autocomplete
+            required
+          />
+          <button id="signup_submit" type="submit">Submit</button>
+        </form>
+        <div>Go back to <a href="/signin">Sign-in page</a></div>
+      </div>
+    </div>
+  </body>
+</html>

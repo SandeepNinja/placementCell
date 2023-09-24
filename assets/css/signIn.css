@@ -1,0 +1,76 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100vh;
+  background-color: beige;
+}
+
+.homeTopDiv {
+  padding: 20px;
+  background-color: bisque;
+  text-align: center;
+}
+
+.homeRemainingDiv {
+  height: calc(100% - 77px);
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signInContainer {
+  text-align: center;
+  background-color: lightgray;
+  height: auto;
+  width: 45vw;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.signInHeading {
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.signInInputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  padding: 10px;
+  font-size: 20px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  width: 40vw;
+}
+input[type="submit"] {
+  width: 101px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 572px) {
+  .homeTopDiv {
+    background-color: blue;
+  }
+  .homeTopDiv h1 {
+    font-size: 20px;
+    color: red;
+  }
+  .signInContainer {
+    width: 70vw;
+  }
+  input {
+    width: 65vw;
+  }
+}

@@ -1,0 +1,74 @@
+<div class="addStudentProfilePage">
+  <div class="addStudentProfileContainer">
+    <form action="/createstu" method="post">
+      <div class="addKeyValueContainer">
+        <label class="addKey" for="name">Name :</label>
+        <input class="addValue" id="name" name="name" type="text" required />
+      </div>
+      <div class="addKeyValueContainer">
+        <label class="addKey" for="email">Email :</label>
+
+        <input class="addValue" id="email" name="email" type="text" required />
+      </div>
+      <div class="addKeyValueContainer">
+        <label class="addKey" for="college">College :</label>
+
+        <input
+          class="addValue"
+          id="college"
+          name="college"
+          type="text"
+          required
+        />
+      </div>
+      <div class="addKeyValueContainer">
+        <label class="addKey" for="status">Status :</label>
+        <select class="addValue" name="status" id="status">
+          <option value="Placed">Placed</option>
+          <option value="not Placed">Not Placed</option>
+        </select>
+      </div>
+      <div class="addKeyValueContainer">
+        <label class="addKey" for="DSA_final_score">DSA Final Score :</label>
+
+        <input
+          class="addValue"
+          id="DSA_final_score"
+          name="DSA_final_score"
+          type="text"
+          required
+        />
+      </div>
+      <div class="addKeyValueContainer">
+        <label class="addKey" for="Web_final_score">WEB Final Score :</label>
+
+        <input
+          class="addValue"
+          id="Web_final_score"
+          name="Web_final_score"
+          type="text"
+          required
+        />
+      </div>
+      <div class="addKeyValueContainer">
+        <label class="addKey" for="React_final_score"
+          >React Final Score :</label
+        >
+
+        <input
+          class="addValue"
+          id="React_final_score"
+          name="React_final_score"
+          type="text"
+          required
+        />
+      </div>
+      <!-- <div class="addKeyValueContainer">
+        <label class="addKey">Interviews :</label>
+
+        <input class="addValue" type="text" value="[]" />
+      </div> -->
+      <button id="add_student_btn">Add Student</button>
+    </form>
+  </div>
+</div>

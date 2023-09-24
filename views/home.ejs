@@ -1,0 +1,32 @@
+<!-- <%- include("_header"); %> -->
+<!-- <h1>Hello I am a Home Page</h1> -->
+<div class="homeContainer">
+  <div class="studentListContainer">
+    <div class="studentListHeading">Student List</div>
+    <ol>
+      <% studentList.forEach((user)=>{ %>
+      <li>
+        <a href="/studentprofile/<%= user.id %>" rel="noopener noreferrer"
+          ><%= user.name %></a
+        >
+      </li>
+      <% }) %>
+    </ol>
+  </div>
+
+  <div class="companyListContainer">
+    <div class="companyListHeading">Sheduled Interview</div>
+    <ol class="olOfCompany">
+      <% companyInterviewList.forEach((company)=>{ %>
+      <li>
+        <a href="/companyPage/<%= company.id %>">
+          <span><%= company.name %></span>
+          <span class="DateOfInterviewCss"><%= company.DateOfInterview%></span>
+        </a>
+      </li>
+      <% }) %>
+    </ol>
+  </div>
+</div>
+
+<!-- <%- include("_footer"); %> -->
